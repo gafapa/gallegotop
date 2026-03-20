@@ -15,11 +15,11 @@ The application is a static `React + Vite` landing page. It does not depend on a
 ## UI Structure
 
 - `Header`: brand, anchor navigation, language switcher, email CTA.
-- `Hero`: editorial value proposition, primary actions, metrics, and SVG illustration.
+- `Hero`: app-first entry point, category shortcuts, metrics, featured tools, and SVG illustration.
 - `Catalogue`: search, category filters, grouped internal tools, and empty state handling.
-- `Method`: explanation of principles, operating model, and SEO/distribution readiness.
+- `Support strip`: compact secondary context for operating model and SEO readiness.
 - `Community`: related external projects sourced from `.external`.
-- `Story / Contact`: project context and contribution invitation.
+- `Contact`: compact project context and contribution invitation.
 
 ## Data Sources
 
@@ -67,10 +67,10 @@ Adding a new locale requires updating:
 
 The current visual system is defined in `src/styles.css` and follows these principles:
 
-- warm editorial background instead of generic dashboard aesthetics
+- blue institutional palette closer to public education interfaces
 - serif display type paired with a clean sans-serif UI font
 - card-based hierarchy with reusable spacing and radius tokens
-- category accents derived from semantic sections
+- first-screen emphasis on apps, categories, and direct access
 - decorative but local SVG artwork stored in `src/assets/`
 
 ## SEO and Discovery

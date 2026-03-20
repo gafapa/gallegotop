@@ -1,6 +1,6 @@
 # gallego.top
 
-`gallego.top` is a multilingual editorial landing page for discovering browser-based teaching tools and related education projects. The site keeps the catalogue file-driven, preserves strong SEO defaults, and now uses a warmer visual system with custom SVG illustrations integrated into the interface.
+`gallego.top` is a multilingual editorial landing page for discovering browser-based teaching tools and related education projects. The site keeps the catalogue file-driven, preserves strong SEO defaults, and now gives even more weight to app discovery, category filtering, and quick access from the first screen.
 
 ## Stack
 
@@ -36,7 +36,7 @@ npm run preview
 
 ## Main Files
 
-- `src/App.jsx`: page composition, locale state, filtering, and section orchestration.
+- `src/App.jsx`: page composition, locale state, app-first filtering flow, and section orchestration.
 - `src/components/Seo.jsx`: canonical, hreflang, Open Graph, Twitter tags, and JSON-LD.
 - `src/components/LanguageSwitcher.jsx`: accessible locale switcher.
 - `src/components/InternalProjectCard.jsx`: internal catalogue card component.

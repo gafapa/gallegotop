@@ -1,20 +1,7 @@
 import { startTransition, useDeferredValue, useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import {
-  ArrowRight,
-  Blocks,
-  FolderSearch,
-  Globe2,
-  Languages,
-  LibraryBig,
-  Mail,
-  Search,
-  ShieldCheck,
-  Sparkles,
-  Workflow,
-} from "lucide-react";
+import { ArrowRight, Blocks, Globe2, LibraryBig, Mail, Search, Sparkles, Workflow } from "lucide-react";
 import heroVisual from "./assets/hero-visual.svg";
-import methodVisual from "./assets/method-visual.svg";
 import Seo from "./components/Seo";
 import ExternalProjectCard from "./components/ExternalProjectCard";
 import InternalProjectCard from "./components/InternalProjectCard";
@@ -107,15 +94,15 @@ export default function App() {
     { value: externalSites.length, label: copy.ui.stats.external },
     { value: locales.length, label: copy.ui.stats.languages },
   ];
+  const featuredApps = internalApps.slice(0, 4);
   const categoryButtons = [
     { code: "all", label: focusCopy.allProjects, count: internalApps.length },
     ...groupedApps.map((group) => ({ code: group.category, label: group.title, count: group.items.length })),
   ];
   const navItems = [
     { href: "#catalog", label: copy.ui.catalogLabel },
-    { href: "#method", label: copy.ui.methodLabel },
     { href: "#community", label: copy.ui.externalLabel },
-    { href: "#story", label: focusCopy.storyLabel },
+    { href: "#contact", label: copy.ui.contactLabel },
   ];
 
   function handleCategorySelect(category) {
@@ -181,10 +168,10 @@ export default function App() {
               animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
               transition={{ duration: 0.55 }}
             >
-              <span className="section-kicker">{copy.ui.heroEyebrow}</span>
-              <h1>{copy.ui.heroTitle}</h1>
-              <p className="hero-lead">{copy.ui.heroLead}</p>
-              <p className="hero-support">{copy.ui.heroSupport}</p>
+              <span className="section-kicker">{focusCopy.projectsPrimaryLabel}</span>
+              <h1>{focusCopy.projectsPrimaryTitle}</h1>
+              <p className="hero-lead">{focusCopy.projectsPrimaryCopy}</p>
+              <p className="hero-support">{copy.ui.catalogCopy}</p>
 
               <div className="hero-actions">
                 <a className="button button-primary" href="#catalog">
@@ -196,11 +183,19 @@ export default function App() {
                 </a>
               </div>
 
-              <ul className="hero-pillars" aria-label={copy.ui.manifestoLabel}>
-                {copy.ui.heroPillars.map((item) => (
-                  <li key={item}>{item}</li>
+              <div className="hero-categories" aria-label={focusCopy.categorySummary}>
+                {groupedApps.map((group) => (
+                  <button
+                    key={group.category}
+                    type="button"
+                    className={activeCategory === group.category ? "hero-category-button is-active" : "hero-category-button"}
+                    onClick={() => handleCategorySelect(group.category)}
+                  >
+                    <span>{group.title}</span>
+                    <strong>{group.items.length}</strong>
+                  </button>
                 ))}
-              </ul>
+              </div>
 
               <div className="hero-stats" role="list" aria-label={copy.ui.livePanelLabel}>
                 {heroStats.map((item) => (
@@ -223,50 +218,19 @@ export default function App() {
               </div>
 
               <div className="hero-panel-copy">
-                <span className="section-kicker">{copy.ui.livePanelLabel}</span>
-                <h2>{copy.ui.livePanelTitle}</h2>
-                <p>{copy.ui.livePanelCopy}</p>
+                <span className="section-kicker">{copy.ui.catalogLabel}</span>
+                <h2>{copy.ui.catalogTitle}</h2>
+                <p>{copy.ui.heroLead}</p>
               </div>
 
-              <div className="signal-row">
-                <article className="signal-card">
-                  <span className="signal-icon">
-                    <FolderSearch size={18} aria-hidden="true" />
-                  </span>
-                  <strong>{focusCopy.projectsPrimaryLabel}</strong>
-                  <p>{focusCopy.projectsPrimaryCopy}</p>
-                </article>
-
-                <article className="signal-card">
-                  <span className="signal-icon">
-                    <Languages size={18} aria-hidden="true" />
-                  </span>
-                  <strong>{messages[locale].languageName}</strong>
-                  <p>{copy.ui.stats.languages}: {locales.length}</p>
-                </article>
-              </div>
-
-              <div className="category-overview">
-                {groupedApps.map((group) => {
-                  const Icon = iconMap[group.category] || Blocks;
-
-                  return (
-                    <button
-                      key={group.category}
-                      type="button"
-                      className={activeCategory === group.category ? "overview-tile is-active" : "overview-tile"}
-                      onClick={() => handleCategorySelect(group.category)}
-                    >
-                      <span className="overview-icon">
-                        <Icon size={18} aria-hidden="true" />
-                      </span>
-                      <span className="overview-copy">
-                        <strong>{group.title}</strong>
-                        <small>{group.items.length}</small>
-                      </span>
-                    </button>
-                  );
-                })}
+              <div className="featured-grid">
+                {featuredApps.map((app) => (
+                  <a key={app.slug} className="featured-app" href={app.href} target="_blank" rel="noreferrer">
+                    <span className="card-badge">{app.tagLabel}</span>
+                    <strong>{app.titleLabel}</strong>
+                    <small>{app.slug}</small>
+                  </a>
+                ))}
               </div>
             </motion.aside>
           </section>
@@ -368,61 +332,24 @@ export default function App() {
             </div>
           </motion.section>
 
-          <motion.section id="method" className="system-section" {...(reduceMotion ? {} : revealSection)}>
-            <div className="system-lead">
-              <SectionHeader
-                id="method-title"
-                eyebrow={copy.ui.methodLabel}
-                title={copy.ui.methodTitle}
-                description={copy.ui.manifestoCopy}
-                compact
-              />
+          <motion.section className="support-strip" {...(reduceMotion ? {} : revealSection)}>
+            <article className="support-card">
+              <span className="section-kicker">{copy.ui.methodLabel}</span>
+              <h3>{copy.ui.methodTitle}</h3>
+              <p>{copy.ui.methodSteps[0]}</p>
+            </article>
 
-              <div className="system-visual">
-                <img className="visual-image" src={methodVisual} alt="" />
-              </div>
-            </div>
+            <article className="support-card">
+              <span className="section-kicker">{copy.ui.manifestoLabel}</span>
+              <h3>{copy.ui.manifestoTitle}</h3>
+              <p>{copy.ui.manifestoPoints[0]}</p>
+            </article>
 
-            <div className="system-grid">
-              <article className="system-card">
-                <span className="system-icon">
-                  <ShieldCheck size={18} aria-hidden="true" />
-                </span>
-                <h3>{copy.ui.manifestoTitle}</h3>
-                <p>{copy.ui.manifestoCopy}</p>
-                <ul>
-                  {copy.ui.manifestoPoints.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </article>
-
-              <article className="system-card">
-                <span className="system-icon">
-                  <Workflow size={18} aria-hidden="true" />
-                </span>
-                <h3>{copy.ui.methodTitle}</h3>
-                <p>{copy.ui.catalogCopy}</p>
-                <ol>
-                  {copy.ui.methodSteps.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ol>
-              </article>
-
-              <article className="system-card">
-                <span className="system-icon">
-                  <Sparkles size={18} aria-hidden="true" />
-                </span>
-                <h3>{copy.ui.seoTitle}</h3>
-                <p>{copy.ui.livePanelCopy}</p>
-                <ul>
-                  {copy.ui.seoItems.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </article>
-            </div>
+            <article className="support-card">
+              <span className="section-kicker">{copy.ui.seoLabel}</span>
+              <h3>{copy.ui.seoTitle}</h3>
+              <p>{copy.ui.seoItems[0]}</p>
+            </article>
           </motion.section>
 
           <motion.section id="community" className="community-section" {...(reduceMotion ? {} : revealSection)}>
@@ -447,17 +374,14 @@ export default function App() {
             </div>
           </motion.section>
 
-          <motion.section id="story" className="story-section" {...(reduceMotion ? {} : revealSection)}>
-            <article className="story-card">
+          <motion.section id="contact" className="story-section" {...(reduceMotion ? {} : revealSection)}>
+            <article className="story-card is-compact">
               <span className="section-kicker">{focusCopy.storyLabel}</span>
               <h2>{focusCopy.storyTitle}</h2>
               <p className="story-lead">{focusCopy.storyLead}</p>
-              {focusCopy.storyParagraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
             </article>
 
-            <aside className="contact-card">
+            <aside className="contact-card is-compact">
               <span className="section-kicker">{copy.ui.contactLabel}</span>
               <h2>{copy.ui.contactTitle}</h2>
               <p>{copy.ui.contactCopy}</p>
