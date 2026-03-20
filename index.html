@@ -3,154 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gallego.top | Herramientas docentes en el navegador</title>
     <meta
       name="description"
-      content="Herramientas docentes que se ejecutan en el navegador para trabajar con más tranquilidad en el contexto actual de protección de datos y uso de IA."
+      content="Herramientas docentes que se ejecutan en el navegador con enfoque práctico, privacidad local y un catálogo abierto de apps educativas."
     />
-    <title>gallego.top | Herramientas para profes</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <meta
+      name="keywords"
+      content="gallego.top, herramientas docentes, educación, apps para profesores, privacidad, IA educativa, navegador"
+    />
+    <meta name="author" content="Pablo Gallego" />
+    <meta name="theme-color" content="#efe5d0" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="gallego.top" />
+    <meta property="og:title" content="gallego.top | Herramientas docentes en el navegador" />
+    <meta
+      property="og:description"
+      content="Discover multilingual teaching tools with an editorial catalogue, privacy-first execution and practical classroom value."
+    />
+    <meta property="og:url" content="https://gallego.top/" />
+    <meta property="og:image" content="https://gallego.top/og-cover.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="gallego.top | Herramientas docentes en el navegador" />
+    <meta
+      name="twitter:description"
+      content="Editorial landing for classroom tools that run in the browser and stay practical."
+    />
+    <meta name="twitter:image" content="https://gallego.top/og-cover.svg" />
+    <link rel="canonical" href="https://gallego.top/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
-    <div class="site-shell">
-      <header class="topbar shell-width">
-        <a class="brand" href="#top" aria-label="gallego.top">
-          <span class="brand-mark">g.</span>
-          <span>
-            <strong>gallego.top</strong>
-            <small data-i18n="topbar.subtitle">Herramientas docentes en el navegador</small>
-          </span>
-        </a>
-
-        <div class="topbar-actions">
-          <div class="lang-switch" aria-label="Language switcher">
-            <button type="button" class="lang-button is-active" data-lang="es">ES</button>
-            <button type="button" class="lang-button" data-lang="gl">GL</button>
-            <button type="button" class="lang-button" data-lang="en">EN</button>
-          </div>
-          <a class="contact-link" href="mailto:pablo@gallegofalcon.com">pablo@gallegofalcon.com</a>
-        </div>
-      </header>
-
-      <main id="top" class="shell-width">
-        <section class="hero">
-          <div class="hero-copy panel">
-            <span class="eyebrow" data-i18n="hero.eyebrow">Proyecto abierto</span>
-            <h1 data-i18n="hero.title">Herramientas útiles para profes, pensadas para usarse con criterio.</h1>
-            <p class="lead" data-i18n="hero.lead">
-              Soy un profe que quiere ayudar a otros profes con aplicaciones que resuelvan trabajo real y que puedan utilizarse con más tranquilidad en el contexto actual de protección de datos y uso de IA.
-            </p>
-            <p class="support" data-i18n="hero.support">
-              Todas las herramientas se ejecutan en el navegador para que la información no salga a ningún servicio externo durante su uso habitual.
-            </p>
-
-            <div class="hero-actions">
-              <a class="button button-primary" href="#catalog" data-i18n="hero.ctaCatalog">Ver aplicaciones</a>
-              <a class="button button-secondary" href="#contact" data-i18n="hero.ctaContact">Proponer una idea</a>
-            </div>
-
-            <div class="hero-stats">
-              <article class="stat-card">
-                <strong class="stat-value" id="stat-apps">15</strong>
-                <span class="stat-label" data-i18n="hero.statApps">apps activas o en desarrollo</span>
-              </article>
-              <article class="stat-card">
-                <strong class="stat-value" data-i18n="hero.statStaticValue">100%</strong>
-                <span class="stat-label" data-i18n="hero.statStatic">web estática y rápida</span>
-              </article>
-              <article class="stat-card">
-                <strong class="stat-value" data-i18n="hero.statBrowserValue">Local</strong>
-                <span class="stat-label" data-i18n="hero.statBrowser">ejecución en navegador</span>
-              </article>
-            </div>
-          </div>
-
-          <aside class="hero-side panel">
-            <span class="section-label" data-i18n="side.label">Enfoque</span>
-            <h2 data-i18n="side.title">Tecnología útil, simple de usar y pensada para el aula real.</h2>
-            <p data-i18n="side.copy">
-              El objetivo no es acumular demos de IA. Es crear utilidades concretas que reduzcan tareas repetitivas, faciliten la preparación de materiales y respeten mejor el contexto normativo actual.
-            </p>
-            <ul class="check-list">
-              <li data-i18n="side.item1">Sin instalaciones complejas ni flujos innecesarios.</li>
-              <li data-i18n="side.item2">Con prioridad por el tratamiento local de la información.</li>
-              <li data-i18n="side.item3">Abierto a mejoras, nuevas ideas y necesidades reales de otros docentes.</li>
-            </ul>
-          </aside>
-        </section>
-
-        <section class="pillars">
-          <article class="panel pillar-card">
-            <span class="section-label" data-i18n="pillars.one.label">Privacidad</span>
-            <h2 data-i18n="pillars.one.title">Uso desde el navegador</h2>
-            <p data-i18n="pillars.one.copy">
-              Las aplicaciones están pensadas para ejecutarse en el navegador, reduciendo al máximo la salida de datos y simplificando su adopción en entornos educativos.
-            </p>
-          </article>
-          <article class="panel pillar-card">
-            <span class="section-label" data-i18n="pillars.two.label">Utilidad</span>
-            <h2 data-i18n="pillars.two.title">Orientadas a trabajo docente real</h2>
-            <p data-i18n="pillars.two.copy">
-              Cada herramienta nace de tareas habituales: preparar materiales, revisar documentos, organizar trabajo o agilizar procesos que consumen tiempo.
-            </p>
-          </article>
-          <article class="panel pillar-card">
-            <span class="section-label" data-i18n="pillars.three.label">Evolución</span>
-            <h2 data-i18n="pillars.three.title">Proyecto vivo</h2>
-            <p data-i18n="pillars.three.copy">
-              El catálogo seguirá creciendo. Si echas en falta una aplicación o detectas mejoras, puedes escribir para proponerla.
-            </p>
-          </article>
-        </section>
-
-        <section id="catalog" class="catalog-block">
-          <div class="section-heading">
-            <span class="section-label" data-i18n="catalog.label">Catálogo</span>
-            <h2 data-i18n="catalog.title">Aplicaciones agrupadas por categorías</h2>
-            <p data-i18n="catalog.copy">
-              Un conjunto de herramientas ligeras, accesibles desde gallego.top, organizado para que resulte fácil encontrar qué resuelve cada una.
-            </p>
-          </div>
-          <div id="catalog-groups" class="catalog-groups"></div>
-        </section>
-
-        <section class="bottom-grid">
-          <article class="panel method-card">
-            <span class="section-label" data-i18n="method.label">Cómo se plantean</span>
-            <h2 data-i18n="method.title">Un criterio simple para construir herramientas útiles</h2>
-            <ol class="method-list">
-              <li data-i18n="method.step1">Identificar una necesidad docente concreta y frecuente.</li>
-              <li data-i18n="method.step2">Resolverla con una interfaz ligera, directa y sin pasos sobrantes.</li>
-              <li data-i18n="method.step3">Mantener la privacidad y la viabilidad de uso como requisito base.</li>
-            </ol>
-          </article>
-
-          <article id="contact" class="panel contact-card">
-            <span class="section-label" data-i18n="contact.label">Contacto</span>
-            <h2 data-i18n="contact.title">Si falta una herramienta, se puede construir.</h2>
-            <p data-i18n="contact.copy">
-              Puedes escribir para proponer una aplicación nueva, comentar una mejora o avisar de cualquier fallo.
-            </p>
-            <a class="button button-primary" href="mailto:pablo@gallegofalcon.com">pablo@gallegofalcon.com</a>
-            <div class="contact-notes">
-              <article>
-                <strong data-i18n="contact.cards.one.title">Nuevas ideas</strong>
-                <p data-i18n="contact.cards.one.copy">Si tienes una necesidad concreta, se puede estudiar una herramienta específica.</p>
-              </article>
-              <article>
-                <strong data-i18n="contact.cards.two.title">Fallos o mejoras</strong>
-                <p data-i18n="contact.cards.two.copy">Si algo no funciona o se puede hacer mejor, interesa saberlo para iterar.</p>
-              </article>
-            </div>
-          </article>
-        </section>
-      </main>
-
-      <footer class="footer shell-width">
-        <p data-i18n="footer.left">gallego.top reúne herramientas para profes ejecutadas en el navegador.</p>
-        <p data-i18n="footer.right">Contacto: pablo@gallegofalcon.com</p>
-      </footer>
-    </div>
-
-    <script src="./app.js" defer></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

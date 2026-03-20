@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="paper" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#F5EDDF" />
+      <stop offset="100%" stop-color="#E6D7B8" />
+    </linearGradient>
+    <linearGradient id="panel" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#13253D" />
+      <stop offset="100%" stop-color="#1B3456" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#paper)" />
+  <circle cx="178" cy="122" r="132" fill="#2F6A67" opacity="0.12" />
+  <circle cx="1038" cy="474" r="164" fill="#C26840" opacity="0.12" />
+  <rect x="54" y="54" width="1092" height="522" rx="34" fill="#FBF6EC" stroke="#D7C09A" stroke-width="2" />
+  <rect x="92" y="92" width="472" height="446" rx="28" fill="url(#panel)" />
+  <rect x="592" y="92" width="516" height="128" rx="24" fill="#F3E6CF" stroke="#D7C09A" />
+  <rect x="592" y="244" width="242" height="132" rx="24" fill="#FCF8F1" stroke="#D7C09A" />
+  <rect x="866" y="244" width="242" height="132" rx="24" fill="#FCF8F1" stroke="#D7C09A" />
+  <rect x="592" y="402" width="516" height="136" rx="24" fill="#173452" />
+  <text x="126" y="158" fill="#7FCBC2" font-size="26" font-family="Verdana, sans-serif" letter-spacing="4">gallego.top</text>
+  <text x="126" y="248" fill="#F7F0E5" font-size="72" font-family="Georgia, serif">Teaching tools</text>
+  <text x="126" y="322" fill="#F7F0E5" font-size="72" font-family="Georgia, serif">with editorial</text>
+  <text x="126" y="396" fill="#F7F0E5" font-size="72" font-family="Georgia, serif">clarity</text>
+  <text x="126" y="468" fill="#CFD8E2" font-size="29" font-family="Verdana, sans-serif">
+    Multilingual catalogue, browser-first privacy and practical classroom workflows.
+  </text>
+  <text x="624" y="150" fill="#173452" font-size="22" font-family="Verdana, sans-serif" letter-spacing="3">MULTILINGUAL LANDING</text>
+  <text x="624" y="188" fill="#173452" font-size="40" font-family="Georgia, serif">Beautiful, useful, fast to scan.</text>
+  <text x="626" y="298" fill="#173452" font-size="18" font-family="Verdana, sans-serif">7 languages</text>
+  <text x="900" y="298" fill="#173452" font-size="18" font-family="Verdana, sans-serif">Live catalogue</text>
+  <text x="624" y="478" fill="#F5EDDF" font-size="24" font-family="Verdana, sans-serif">
+    Designed for real teaching work, not for generic demos.
+  </text>
+</svg>
