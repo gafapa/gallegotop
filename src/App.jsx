@@ -9,6 +9,7 @@ import LanguageSwitcher from "./components/LanguageSwitcher";
 import SectionHeader from "./components/SectionHeader";
 import { projectFocusContent } from "./content/projectFocusContent";
 import { locales, messages } from "./content/siteContent";
+import { teacherLandingContent } from "./content/teacherLandingContent";
 import { categoryOrder, getExternalSites, getInternalApps } from "./data/catalog";
 
 const iconMap = {
@@ -53,6 +54,7 @@ export default function App() {
   const reduceMotion = useReducedMotion();
   const copy = messages[locale];
   const focusCopy = projectFocusContent[locale] || projectFocusContent.es;
+  const landing = teacherLandingContent[locale] || teacherLandingContent.es;
   const internalApps = getInternalApps(locale);
   const externalSites = getExternalSites(locale);
 
@@ -90,9 +92,9 @@ export default function App() {
 
   const visibleCount = filteredGroups.reduce((total, group) => total + group.items.length, 0);
   const heroStats = [
-    { value: internalApps.length, label: copy.ui.stats.internal },
-    { value: externalSites.length, label: copy.ui.stats.external },
-    { value: locales.length, label: copy.ui.stats.languages },
+    { value: internalApps.length, label: landing.stats.internal },
+    { value: externalSites.length, label: landing.stats.external },
+    { value: locales.length, label: landing.stats.languages },
   ];
   const featuredApps = internalApps.slice(0, 4);
   const categoryButtons = [
@@ -169,9 +171,9 @@ export default function App() {
               transition={{ duration: 0.55 }}
             >
               <span className="section-kicker">{focusCopy.projectsPrimaryLabel}</span>
-              <h1>{focusCopy.projectsPrimaryTitle}</h1>
-              <p className="hero-lead">{focusCopy.projectsPrimaryCopy}</p>
-              <p className="hero-support">{copy.ui.catalogCopy}</p>
+              <h1>{landing.heroTitle}</h1>
+              <p className="hero-lead">{landing.heroLead}</p>
+              <p className="hero-support">{landing.heroSupport}</p>
 
               <div className="hero-actions">
                 <a className="button button-primary" href="#catalog">
@@ -179,7 +181,7 @@ export default function App() {
                   <ArrowRight size={18} aria-hidden="true" />
                 </a>
                 <a className="button button-secondary" href="#community">
-                  {copy.ui.heroSecondary}
+                  {landing.heroSecondary}
                 </a>
               </div>
 
@@ -218,9 +220,9 @@ export default function App() {
               </div>
 
               <div className="hero-panel-copy">
-                <span className="section-kicker">{copy.ui.catalogLabel}</span>
-                <h2>{copy.ui.catalogTitle}</h2>
-                <p>{copy.ui.heroLead}</p>
+                <span className="section-kicker">{landing.catalogLabel}</span>
+                <h2>{landing.catalogTitle}</h2>
+                <p>{landing.catalogCopy}</p>
               </div>
 
               <div className="featured-grid">
@@ -238,9 +240,9 @@ export default function App() {
           <motion.section id="catalog" className="catalog-section" {...(reduceMotion ? {} : revealSection)}>
             <SectionHeader
               id="catalog-title"
-              eyebrow={copy.ui.catalogLabel}
-              title={copy.ui.catalogTitle}
-              description={copy.ui.catalogCopy}
+              eyebrow={landing.catalogLabel}
+              title={landing.catalogTitle}
+              description={landing.catalogCopy}
             />
 
             <div className="catalog-shell">
@@ -332,32 +334,12 @@ export default function App() {
             </div>
           </motion.section>
 
-          <motion.section className="support-strip" {...(reduceMotion ? {} : revealSection)}>
-            <article className="support-card">
-              <span className="section-kicker">{copy.ui.methodLabel}</span>
-              <h3>{copy.ui.methodTitle}</h3>
-              <p>{copy.ui.methodSteps[0]}</p>
-            </article>
-
-            <article className="support-card">
-              <span className="section-kicker">{copy.ui.manifestoLabel}</span>
-              <h3>{copy.ui.manifestoTitle}</h3>
-              <p>{copy.ui.manifestoPoints[0]}</p>
-            </article>
-
-            <article className="support-card">
-              <span className="section-kicker">{copy.ui.seoLabel}</span>
-              <h3>{copy.ui.seoTitle}</h3>
-              <p>{copy.ui.seoItems[0]}</p>
-            </article>
-          </motion.section>
-
           <motion.section id="community" className="community-section" {...(reduceMotion ? {} : revealSection)}>
             <SectionHeader
               id="community-title"
               eyebrow={focusCopy.externalAfter}
-              title={copy.ui.externalTitle}
-              description={copy.ui.externalCopy}
+              title={landing.externalTitle}
+              description={landing.externalCopy}
               compact
             />
 
@@ -367,8 +349,8 @@ export default function App() {
               ) : (
                 <article className="external-card empty-card">
                   <span className="card-badge">{copy.ui.externalLabel}</span>
-                  <h3>{copy.ui.externalEmptyTitle}</h3>
-                  <p>{copy.ui.externalEmptyCopy}</p>
+                  <h3>{landing.externalEmptyTitle}</h3>
+                  <p>{landing.externalEmptyCopy}</p>
                 </article>
               )}
             </div>
@@ -377,14 +359,17 @@ export default function App() {
           <motion.section id="contact" className="story-section" {...(reduceMotion ? {} : revealSection)}>
             <article className="story-card is-compact">
               <span className="section-kicker">{focusCopy.storyLabel}</span>
-              <h2>{focusCopy.storyTitle}</h2>
-              <p className="story-lead">{focusCopy.storyLead}</p>
+              <h2>{landing.projectTitle}</h2>
+              <p className="story-lead">{landing.projectLead}</p>
+              {landing.projectParagraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
             </article>
 
             <aside className="contact-card is-compact">
               <span className="section-kicker">{copy.ui.contactLabel}</span>
-              <h2>{copy.ui.contactTitle}</h2>
-              <p>{copy.ui.contactCopy}</p>
+              <h2>{landing.contactTitle}</h2>
+              <p>{landing.contactCopy}</p>
               <a className="button button-primary" href="mailto:pablo@gallegofalcon.com">
                 {copy.ui.contactButton}
               </a>
@@ -399,7 +384,7 @@ export default function App() {
         </main>
 
         <footer className="footer">
-          <p>{copy.ui.footer}</p>
+          <p>{landing.footer}</p>
         </footer>
       </div>
     </>

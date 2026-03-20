@@ -17,9 +17,8 @@ The application is a static `React + Vite` landing page. It does not depend on a
 - `Header`: brand, anchor navigation, language switcher, email CTA.
 - `Hero`: app-first entry point, category shortcuts, metrics, featured tools, and SVG illustration.
 - `Catalogue`: search, category filters, grouped internal tools, and empty state handling.
-- `Support strip`: compact secondary context for operating model and SEO readiness.
-- `Community`: related external projects sourced from `.external`.
-- `Contact`: compact project context and contribution invitation.
+- `Community`: useful websites and projects created by other teachers.
+- `Project / Contact`: brief project framing around teacher autonomy with AI and contribution invitation.
 
 ## Data Sources
 

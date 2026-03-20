@@ -1,6 +1,6 @@
 # gallego.top
 
-`gallego.top` is a multilingual editorial landing page for discovering browser-based teaching tools and related education projects. The site keeps the catalogue file-driven, preserves strong SEO defaults, and now gives even more weight to app discovery, category filtering, and quick access from the first screen.
+`gallego.top` is a multilingual editorial landing page for teachers. Its main job is to explain the available apps clearly, surface useful websites from other teachers, and frame the project as a practical way to build more autonomy with AI in everyday teaching work.
 
 ## Stack
 
