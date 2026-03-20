@@ -15,11 +15,6 @@ export default function ExternalProjectCard({ copy, site }) {
             {copy.ui.communityBy} {site.author}
           </span>
         ) : null}
-        {site.focus ? (
-          <span>
-            {copy.ui.communityFocus}: {site.focus}
-          </span>
-        ) : null}
       </div>
 
       <a href={site.url} target="_blank" rel="noreferrer">

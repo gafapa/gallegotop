@@ -4,7 +4,7 @@ export const projectFocusContent = {
     projectsPrimaryLabel: "Proyectos",
     projectsPrimaryTitle: "Encuentra rápido la herramienta que necesitas",
     projectsPrimaryCopy:
-      "La portada ahora está pensada como índice del catálogo: filtra por categoría, busca por nombre o recorre las apps desde una vista más clara.",
+      "Puedes filtrar las apps por categoría, buscarlas por nombre y localizar rápido la herramienta que necesitas para una tarea concreta.",
     searchPlaceholder: "Buscar por nombre, función o slug",
     searchLabel: "Buscar proyectos",
     categorySummary: "Categorías",
@@ -34,7 +34,7 @@ export const projectFocusContent = {
     projectsPrimaryLabel: "Proxectos",
     projectsPrimaryTitle: "Atopa rápido a ferramenta que precisas",
     projectsPrimaryCopy:
-      "A portada está pensada como índice do catálogo: filtra por categoría, busca por nome ou percorre as apps desde unha vista máis clara.",
+      "Podes filtrar as apps por categoría, buscalas por nome e atopar rápido a ferramenta que precisas para unha tarefa concreta.",
     searchPlaceholder: "Buscar por nome, función ou slug",
     searchLabel: "Buscar proxectos",
     categorySummary: "Categorías",
@@ -64,7 +64,7 @@ export const projectFocusContent = {
     projectsPrimaryLabel: "Projectes",
     projectsPrimaryTitle: "Troba ràpid l'eina que necessites",
     projectsPrimaryCopy:
-      "La portada ara funciona com a índex del catàleg: filtra per categoria, cerca per nom o recorre les apps des d'una vista més clara.",
+      "Pots filtrar les apps per categoria, cercar-les pel nom i trobar ràpid l'eina que necessites per a una tasca concreta.",
     searchPlaceholder: "Cerca per nom, funció o slug",
     searchLabel: "Cercar projectes",
     categorySummary: "Categories",
@@ -94,7 +94,7 @@ export const projectFocusContent = {
     projectsPrimaryLabel: "Proiektuak",
     projectsPrimaryTitle: "Aurkitu azkar behar duzun tresna",
     projectsPrimaryCopy:
-      "Azal nagusia katalogoaren aurkibide gisa pentsatuta dago: iragazi kategoriaren arabera, bilatu izenez edo arakatu app-ak ikuspegi argiago batetik.",
+      "App-ak kategoriaren arabera iragazi, izenaren arabera bilatu eta zeregin zehatz baterako behar duzun tresna azkar aurki dezakezu.",
     searchPlaceholder: "Bilatu izenaren, funtzioaren edo slugaren arabera",
     searchLabel: "Bilatu proiektuak",
     categorySummary: "Kategoriak",
@@ -124,7 +124,7 @@ export const projectFocusContent = {
     projectsPrimaryLabel: "Projects",
     projectsPrimaryTitle: "Find the right tool faster",
     projectsPrimaryCopy:
-      "The front page now behaves like a catalogue index: filter by category, search by name and scan the apps from a clearer layout.",
+      "You can filter apps by category, search by name, and quickly find the tool you need for a specific teaching task.",
     searchPlaceholder: "Search by name, use case or slug",
     searchLabel: "Search projects",
     categorySummary: "Categories",
@@ -154,7 +154,7 @@ export const projectFocusContent = {
     projectsPrimaryLabel: "Projets",
     projectsPrimaryTitle: "Trouver plus vite le bon outil",
     projectsPrimaryCopy:
-      "La page d'accueil sert désormais d'index du catalogue : filtre par catégorie, recherche par nom et lecture plus claire des apps.",
+      "Vous pouvez filtrer les apps par catégorie, les chercher par nom et trouver rapidement l'outil adapté à une tâche précise.",
     searchPlaceholder: "Rechercher par nom, usage ou slug",
     searchLabel: "Rechercher des projets",
     categorySummary: "Catégories",
@@ -184,7 +184,7 @@ export const projectFocusContent = {
     projectsPrimaryLabel: "Projekte",
     projectsPrimaryTitle: "Das passende Tool schneller finden",
     projectsPrimaryCopy:
-      "Die Startseite funktioniert jetzt als Katalogindex: nach Kategorie filtern, nach Namen suchen und Apps in einer klareren Struktur erfassen.",
+      "Du kannst die Apps nach Kategorie filtern, nach Namen suchen und schnell das passende Werkzeug für eine konkrete Aufgabe finden.",
     searchPlaceholder: "Nach Name, Anwendungsfall oder Slug suchen",
     searchLabel: "Projekte suchen",
     categorySummary: "Kategorien",
