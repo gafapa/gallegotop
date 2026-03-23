@@ -215,40 +215,34 @@ img {
 }
 
 .language-switcher {
+  position: relative;
+}
+
+.language-trigger {
   display: inline-grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
   gap: 0.45rem;
-  min-width: 8.8rem;
-  min-height: 2.5rem;
-  padding: 0.1rem 0.35rem 0.1rem 0.7rem;
+  min-width: 11rem;
+  min-height: 2.6rem;
+  padding: 0.2rem 0.55rem 0.2rem 0.8rem;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.44);
-  backdrop-filter: blur(16px);
-  color: var(--muted);
-}
-
-.language-switcher select {
-  width: 100%;
-  border: 0;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.5);
   color: var(--ink);
-  min-height: 2.35rem;
-  padding: 0 1.1rem 0 0;
-  font-size: 0.82rem;
-  font-weight: 600;
-  outline: 0;
-  appearance: none;
+  backdrop-filter: blur(16px);
   cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 }
 
-.language-switcher:hover {
+.language-trigger:hover,
+.language-trigger:focus-visible,
+.language-switcher.is-open .language-trigger {
   border-color: rgba(0, 91, 150, 0.24);
-  background: rgba(255, 255, 255, 0.62);
+  background: rgba(255, 255, 255, 0.68);
 }
 
-.language-switcher:focus-within {
+.language-trigger:focus-visible {
   outline: 2px solid var(--accent-sky);
   outline-offset: 3px;
 }
@@ -257,9 +251,63 @@ img {
   color: var(--accent-blue);
 }
 
-.language-switcher select option {
+.language-current {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.language-menu {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  right: 0;
+  z-index: 40;
+  width: min(16rem, 80vw);
+  padding: 0.45rem;
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  background: rgba(248, 252, 255, 0.98);
+  box-shadow: 0 22px 42px rgba(18, 50, 79, 0.18);
+  backdrop-filter: blur(18px);
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.8rem 0.9rem;
+  border: 0;
+  border-radius: 1rem;
+  background: transparent;
   color: var(--ink);
-  background: var(--white);
+  cursor: pointer;
+  text-align: left;
+}
+
+.language-option:hover,
+.language-option:focus-visible,
+.language-option.is-selected {
+  background: rgba(13, 116, 187, 0.08);
+}
+
+.language-option-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--muted);
+}
+
+.language-code {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
 .contact-link {
