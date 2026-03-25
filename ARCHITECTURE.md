@@ -20,6 +20,8 @@ The application is a static `React + Vite` landing page. It does not depend on a
 - `Community`: useful websites and projects created by other teachers.
 - `Project / Contact`: brief project framing around teacher autonomy with AI and contribution invitation.
 
+Section and category reveals are mount-based. Content visibility does not depend on scroll position to appear.
+
 ## Data Sources
 
 ### Internal Apps

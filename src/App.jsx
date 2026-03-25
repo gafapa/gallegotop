@@ -21,8 +21,7 @@ const iconMap = {
 
 const revealSection = {
   initial: { opacity: 0, y: 24 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, amount: 0.18 },
+  animate: { opacity: 1, y: 0 },
   transition: { duration: 0.5 },
 };
 
@@ -299,8 +298,7 @@ export default function App() {
                         key={group.category}
                         className={`category-panel tone-${group.category}`}
                         initial={reduceMotion ? false : { opacity: 0, y: 16 }}
-                        whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.15 }}
+                        animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
                         transition={{ duration: 0.45 }}
                       >
                         <div className="category-header">
