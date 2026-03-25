@@ -27,6 +27,7 @@ The application is a static `React + Vite` landing page. It does not depend on a
 - Source file: `.webs`
 - Parser: `parseInternalCatalog` in `src/utils/catalog.js`
 - Enrichment: `src/data/meta/*.js`
+- Explicit metadata coverage includes `wifi`, `stats`, `timer`, `focusator`, and `soundlevel` under the planning catalogue.
 - Output shape:
   - `slug`
   - `href`

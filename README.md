@@ -34,6 +34,8 @@ npm run preview
 - `src/content/locales/`: UI copy and SEO content for `es`, `gl`, `ca`, `eu`, `en`, `fr`, and `de`.
 - `src/content/projectFocusContent.js`: search, catalogue, and narrative copy by locale.
 
+The internal catalogue now includes explicit multilingual metadata for the planning utilities `wifi`, `stats`, `timer`, `focusator`, and `soundlevel`.
+
 ## Main Files
 
 - `src/App.jsx`: page composition, locale state, app-first filtering flow, and section orchestration.
